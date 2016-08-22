@@ -1,0 +1,68 @@
+
+%clearFix::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@mixin set-bg-color($color){
+  background: $color;
+  &.hoverable{
+    &:hover{
+      background: lighten($color, 5%);
+    }
+  }
+}
+
+@mixin crossBrowser($key, $value){
+  #{$key}: $value;
+  -webkit-#{$key}: $value;
+  -moz-#{$key}: $value;
+}
+
+@mixin rounded($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin no-select-text($cursor){
+  cursor: $cursor;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  &::selection{
+    background-color: transparent;
+  }
+}
+
+
+@mixin resetMP{
+  margin: 0;
+  padding: 0;
+}
+
+@mixin center-margin{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin marg-lat{
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+@mixin marg-vert{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+@mixin pad-lat($width: 1%){
+  padding-left: $width;
+  padding-right: $width;
+}
+
+@mixin pad-vert($height: 1%){
+  padding-top: $height;
+  padding-bottom: $height;
+}

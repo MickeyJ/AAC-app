@@ -1,0 +1,46 @@
+@import '../variables/color';
+@import '../mixins/general';
+
+@mixin bg-colors{
+  .bg-blue{
+    @include set-bg-color($app-blue);
+
+    &.dark{
+      @include set-bg-color($app-blue-dark);
+    }
+    &.light{
+      @include set-bg-color($app-blue-light);
+    }
+  }
+  .bg-purple{
+    @include set-bg-color($app-purple);
+
+    &.dark{
+      @include set-bg-color($app-purple-dark);
+    }
+    &.light{
+      @include set-bg-color($app-purple-light);
+    }
+  }
+  .bg-orange{
+    @include set-bg-color($app-orange);
+
+    &.dark{
+      @include set-bg-color($app-orange-dark);
+    }
+    &.light{
+      @include set-bg-color($app-orange-light);
+    }
+  }
+  .bg-grey{
+    @include set-bg-color($app-grey);
+
+    &.dark{
+      @include set-bg-color($app-grey-dark);
+    }
+    &.light{
+      @include set-bg-color($app-grey-light);
+    }
+  }
+}
+

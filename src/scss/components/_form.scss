@@ -1,0 +1,60 @@
+@import 'buttons';
+@import '../mixins/center';
+@import '../variables/general';
+
+$form-width: 500px;
+$form-height: 50px;
+
+@mixin forms{
+  .form{
+
+    &.center-both{
+      @include center-both($form-height, $form-width);
+    }
+
+    &.center-lat{
+      @include center-lat($form-width);
+    }
+
+    &.speech{
+      input[type='text']{
+        @include input($form-height, $form-width / 1.5);
+
+        @include phone{
+          @include input(35px, $form-width / 3);
+        }
+      }
+    }
+
+    &.auth{
+      text-align: center;
+      input{
+        @include input($form-height, $form-width, block);
+        margin: 1% 0;
+
+        &.invalid-input{
+          border: 1px solid red;
+        }
+
+        &.valid-input{
+          border: 1px solid green;
+        }
+
+      }
+    }
+
+  }
+
+  .auth-container{
+    min-height: 300px;
+  }
+
+}
+
+@mixin input($height, $width: auto, $display: inline-block){
+  display: $display;
+  width: $width;
+  height: $height;
+  font-size: $height / 2;
+  padding: $height / 10;
+}

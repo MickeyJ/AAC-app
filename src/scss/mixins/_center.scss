@@ -1,0 +1,30 @@
+@import 'general';
+
+@mixin center-lat($width){
+  position: absolute;
+  left: 50%;
+  width: $width;
+  margin-left: -($width / 2);
+}
+
+@mixin center-vert($height){
+  position: absolute;
+  top: 50%;
+  height: $height;
+  margin-top: -($height / 2);
+}
+
+@mixin center-both($height, $width){
+  position: absolute;
+  top: 50%;  left: 50%;
+  width: $width;
+  height: $height;
+  margin-left: -($width / 2);
+  margin-top: -($height / 2);
+}
+
+@mixin center-text($height, $align){
+  min-height: $height;
+  line-height: $height;
+  text-align: $align;
+}

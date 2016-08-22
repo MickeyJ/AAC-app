@@ -1,0 +1,9 @@
+@import 'form';
+
+@mixin speaker{
+  .speaker{
+    min-height: 300px;
+    @include forms;
+
+  }
+}

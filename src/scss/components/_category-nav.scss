@@ -1,0 +1,47 @@
+@import '../variables/color';
+@import '../mixins/center';
+@import '../mixins/transition';
+@import '../variables/general';
+
+.category-nav{
+  float: left;
+  width: 15%;
+  border-top: 1px solid #ccc;
+}
+
+@mixin active{
+  background: lighten($app-grey-light, 20%);
+  color: $app-blue;
+  .link-arrow{
+    opacity: 1;
+  }
+}
+
+.category-nav-link{
+  color: $app-blue;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  @include center-text(40px, left);
+  @include transition(background, 0.1s);
+
+  .link-title{
+    margin-left: 5%;
+  }
+
+  &.active-category{
+    @include active;
+  }
+
+  &:hover{
+    @include active;
+  }
+}
+
+.link-arrow{
+  position: absolute;
+  top: 0;  right: 0;
+  opacity: 0;
+  @include transition(opacity, 0.1s);
+}

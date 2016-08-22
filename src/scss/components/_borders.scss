@@ -1,0 +1,12 @@
+
+@mixin borders{
+
+  .border-dark{
+    border: 1px solid #747474;
+  }
+
+  .border-light{
+    border: 1px solid white;
+  }
+
+}

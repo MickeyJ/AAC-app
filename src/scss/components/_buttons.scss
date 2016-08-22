@@ -1,0 +1,23 @@
+@import '../mixins/general';
+@import '../mixins/media';
+
+@mixin buttons{
+  .app-btn{
+    @include button-display(50px, 150px);
+
+    @include phone{
+      @include button-display(35px, 100px);
+    }
+  }
+}
+
+@mixin button-display($height, $width: auto){
+  height: $height;
+  width: $width;
+  font-size: $height / 2;
+  display: inline-block;
+  @include no-select-text(pointer);
+}
+
+
+

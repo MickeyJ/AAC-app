@@ -1,0 +1,25 @@
+@import '../variables/color';
+
+@mixin txt-colors{
+  .txt-blue{
+    color: $app-blue;
+  }
+  .txt-blue-light{
+    color: $app-blue-light;
+  }
+  .txt-purple{
+    color: $app-purple;
+  }
+  .txt-purple-light{
+    color: $app-purple-light;
+  }
+  .txt-orange{
+    color: $app-orange;
+  }
+  .txt-orange-light{
+    color: $app-orange-light;
+  }
+  .txt-white{
+    color: white;
+  }
+}

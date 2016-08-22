@@ -1,0 +1,59 @@
+@import '../mixins/general';
+@import '../mixins/shadow';
+@import '../variables/font';
+@import '../components/speaker';
+@import '../components/buttons';
+@import '../components/borders';
+@import '../components/category-nav';
+@import '../components/phrase-list';
+@import '../components/form';
+@import '../components/grid';
+@import '../colors/bg-colors';
+@import '../colors/txt-colors';
+
+
+html,
+body{
+  font-family: $lucida;
+  -webkit-appearance: none;
+  @include pad-lat;
+  @include speaker;
+  @include bg-colors;
+  @include txt-colors;
+  @include buttons;
+  @include borders;
+  @include grid;
+  @include forms;
+
+  .shadow{
+    @include box-shadow;
+    border: none;
+  }
+}
+
+#default-wrapper{
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+$top-min-height: 60px;
+
+.app-header{
+  height: $top-min-height;
+  line-height: $top-min-height;
+  text-align: center;
+  font-size: 25px;
+}
+
+.app-navigation{
+  height: $top-min-height;
+  line-height: $top-min-height;
+  text-align: center;
+}
+
+.voice-select{
+  height: $top-min-height;
+  line-height: $top-min-height;
+  text-align: center;
+}
+

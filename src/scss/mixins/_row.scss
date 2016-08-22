@@ -1,0 +1,8 @@
+@function set-width($target, $boxCount, $margin: 0px){
+  @return calc((#{$target} / #{$boxCount}) - #{$margin});
+}
+
+@mixin rowFactory($target, $boxCount, $margin: 0px, $align: top) {
+  width: set-width($target, $boxCount, $margin);
+  float: left;
+}
